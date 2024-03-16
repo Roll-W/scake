@@ -32,6 +32,7 @@
         <module>../scake-meta-server</module>
         <module>../scake-server-common</module>
         <module>../scake-api-parent</module>
+        <module>../scake-common</module>
     </modules>
 
     <properties>
@@ -39,9 +40,9 @@
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <protobuf.version>3.22.2</protobuf.version>
-        <grpc.version>1.53.0</grpc.version>
-        <guava.version>31.1-jre</guava.version>
+        <protobuf.version>3.25.1</protobuf.version>
+        <grpc.version>1.62.2</grpc.version>
+        <guava.version>33.1.0-jre</guava.version>
         <tomcat-api.version>6.0.53</tomcat-api.version>
         <oshi.version>6.4.0</oshi.version>
         <commons-lang3.version>3.12.0</commons-lang3.version>
@@ -93,6 +94,12 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>tech.rollw.scake</groupId>
+                <artifactId>scake-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>tech.rollw.scake</groupId>
                 <artifactId>scake-server-common</artifactId>
@@ -433,10 +440,10 @@
                     <version>${protobuf-maven-plugin.version}</version>
                     <configuration>
                         <useArgumentFile>true</useArgumentFile>
-                        <protocArtifact>com.google.protobuf:protoc:3.21.7:exe:${os.detected.classifier}</protocArtifact>
+                        <protocArtifact>com.google.protobuf:protoc:3.25.1:exe:${os.detected.classifier}</protocArtifact>
                         <pluginId>grpc-java</pluginId>
                         <pluginArtifact>
-                            io.grpc:protoc-gen-grpc-java:1.50.1:exe:${os.detected.classifier}
+                            io.grpc:protoc-gen-grpc-java:1.62.2:exe:${os.detected.classifier}
                         </pluginArtifact>
                     </configuration>
                     <executions>
