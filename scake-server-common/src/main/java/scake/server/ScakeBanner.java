@@ -41,18 +41,17 @@ class ScakeBanner implements Banner {
     };
 
     private static final String[] BANNER = {
-            "",
-            "   _____            __      ",
-            "  / ___/_________ _/ /_____ ",
-            "  \\__ \\/ ___/ __ `/ //_/ _ \\",
-            " ___/ / /__/ /_/ / ,< /  __/",
-            "/____/\\___/\\__,_/_/|_|\\___/ ",
-            "                            "
+            "       _____            __      ",
+            "      / ___/_________ _/ /_____ ",
+            "      \\__ \\/ ___/ __ `/ //_/ _ \\",
+            "     ___/ / /__/ /_/ / ,< /  __/",
+            "    /____/\\___/\\__,_/_/|_|\\___/ ",
+            ""
     };
 
     private static final String SCAKE = " Scake - ";
 
-    private static final int STRAP_LINE_SIZE = 40;
+    private static final int STRAP_LINE_SIZE = 60;
 
     private final String artifact;
 
@@ -76,15 +75,17 @@ class ScakeBanner implements Banner {
             );
         }
 
+        String serverModule = SCAKE + artifact;
         String version = " (v" + ScakeVersion.VERSION + ")";
         StringBuilder padding = new StringBuilder();
-        while (padding.length() < STRAP_LINE_SIZE - (version.length() + SCAKE.length())) {
+        while (padding.length() < STRAP_LINE_SIZE - (version.length() +
+                serverModule.length())) {
             padding.append(" ");
         }
 
         printStream.println(
                 AnsiOutput.toString(
-                        SCAKE + artifact,
+                        serverModule,
                         AnsiColor.DEFAULT, padding.toString(),
                         AnsiStyle.FAINT, version
                 )
