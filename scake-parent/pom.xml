@@ -36,8 +36,8 @@
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <protobuf.version>3.25.1</protobuf.version>
@@ -48,7 +48,7 @@
         <commons-lang3.version>3.12.0</commons-lang3.version>
         <caffeine.version>2.9.3</caffeine.version>
         <jackson.version>2.13.5</jackson.version>
-        <fiesta.version>0.2.1</fiesta.version>
+        <fiesta.version>0.2.2</fiesta.version>
         <jna.version>5.12.1</jna.version>
         <slf4j.version>1.7.32</slf4j.version>
         <caffeine.version>2.9.3</caffeine.version>
